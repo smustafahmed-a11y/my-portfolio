@@ -1,386 +1,3602 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Said Mustaf Ahmed | Civil Engineer Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #004466;
-      color: #fff;
-      padding: 2rem;
-      text-align: center;
-    }
-    section {
-      padding: 2rem;
-      margin: 1rem auto;
-      max-width: 900px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      color: #004466;
-    }
-    h2 {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-    }
-    h3 {
-      color: #2b4c7e;
-      margin-bottom: 10px;
-    }
-    p {
-      margin: 0.5rem 0;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      background: #004466;
-      color: #fff;
-      margin-top: 2rem;
-    }
-    a {
-      color: #004466;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
 
-    /* Portfolio Gallery */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+    <!-- =========================================================
+         BASIC SEO / META
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title"
+        content="Said Mustaf Ahmed | Civil Engineer | Construction | Architectural & Urban Design">
+
+    <meta property="og:description"
+        content="Civil Engineer specializing in construction, site engineering, architectural and urban design, and sustainable infrastructure projects.">
+
+    <meta property="og:image" content="assets/Said_Photo.jpg">
+    <meta property="og:type" content="website">
+
+    <meta name="description"
+        content="Said Mustaf Ahmed — Civil Engineer specializing in construction, site engineering, construction coordination, architectural and urban design, structural design, and sustainable infrastructure projects.">
+
+    <meta name="keywords"
+        content="Said Mustaf Ahmed, Civil Engineer, Construction Engineer, Site Engineer, Construction Coordination, Architectural Design, Urban Design, Structural Engineering, Solar PV, Sustainable Infrastructure, AutoCAD, ArchiCAD, SketchUp, ProtaStructure, Somalia Engineer">
+
+    <meta name="author" content="Said Mustaf Ahmed">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0A1421">
+
+    <!-- Social sharing (use an absolute https:// URL for og:image once the site is online) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title"
+        content="Said Mustaf Ahmed | Civil Engineer | Construction | Architectural & Urban Design">
+    <meta name="twitter:image" content="assets/Said_Photo.jpg">
+
+    <!-- FAVICON - KEEP darl.png -->
+    <link rel="icon" href="assets/darl.png">
+
+    <title>Said Mustaf Ahmed | Civil Engineer | Construction | Architectural & Urban Design</title>
+
+    <!-- =========================================================
+         STYLES
+    ========================================================== -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+
+    <!-- PageFlip -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js" defer></script>
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Said Mustaf Ahmed",
+        "jobTitle": "Civil Engineer",
+        "description": "Civil Engineer specializing in construction, site engineering, architectural and urban design, and sustainable infrastructure projects.",
+        "email": "mailto:smustafahmed@gmail.com",
+        "telephone": "+252615189112",
+        "address": { "@type": "PostalAddress", "addressLocality": "Mogadishu", "addressCountry": "SO" },
+        "alumniOf": [
+            { "@type": "CollegeOrUniversity", "name": "City University of Mogadishu" },
+            { "@type": "CollegeOrUniversity", "name": "Benadir University" }
+        ],
+        "sameAs": [ "https://www.linkedin.com/in/said-mustaf-ahmed-91b057261" ]
     }
-    .project-item {
-      text-align: center;
-      background: #f9fafc;
-      border: 1px solid #e0e6ed;
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease-in-out;
-    }
-    .project-item:hover {
-      transform: scale(1.02);
-    }
-    .project-item img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-    .project-item p {
-      font-size: 15px;
-      color: #2b4c7e;
-      font-weight: 500;
-    }
-    /* Projects list */
-    .project {
-      background: #f9fafc;
-      border: 1px solid #e0e6ed;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 25px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-    .project ul {
-      list-style: disc;
-      margin-left: 20px;
-    }
-    /* Profile picture */
-    .profile img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      display: block;
-      margin: auto 0 15px;
-    }
-    /* Skills */
-    #skills ul {
-      list-style: none;
-      padding: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 10px;
-    }
-    #skills li {
-      background: #f0f4f8;
-      padding: 10px;
-      border-radius: 8px;
-      text-align: center;
-    }
-  </style>
+    </script>
+
 </head>
-<body>
-
-<header>
-  <h1>Said Mustaf Ahmed</h1>
-  <p>Civil Engineer | Structural Designer | Construction Specialist</p>
-</header>
-
-<!-- About Me -->
-<section id="about">
-  <h2>About Me</h2>
-  <div class="profile">
-    <img src="profile.jpg" alt="Said Mustaf Ahmed">
-  </div>
-  <p>
-    I have 1+ years of experience managing civil and structural engineering projects including hospitals, water supply infrastructure, and residential complexes. 
-    Skilled in project planning, site supervision, structural analysis, and climate-resilient design.
-  </p>
-</section>
-
-<!-- Education -->
-<section id="education">
-  <h2>Education</h2>
-  <p><strong>Benadir University</strong> – Bachelor of Civil Engineering, 2024</p>
-  <p><strong>Samabile Professional College</strong> – Diploma in Architectural Engineering, 2022</p>
-  <p><strong>Abrar University</strong> – Diploma in Cost Estimation & Contracting, 2022</p>
-</section>
-
-<!-- Certifications -->
-<section id="certifications">
-  <h2>Licenses & Certifications</h2>
-  <ul>
-    <li>Introduction to HSE Engineering – Khalifa University (2025)</li>
-    <li>The Construction Management Industry – University of Maryland (2025)</li>
-    <li>Water Pollution Management – Cap-Net (2025)</li>
-    <li>Prokon Analysis & Design of R.C.C Buildings – Udemy (2025)</li>
-    <li>Oracle Primavera P6 – Udemy (2024)</li>
-    <li>SketchUp & Revit for 3D Modeling – Udemy (2024)</li>
-    <li>IWRM for Climate Resilience – Cap-Net (2023)</li>
-    <li>Introduction to Climate Change – CARE Academy (2023)</li>
-  </ul>
-</section>
-
-<!-- Experience -->
-<section id="experience">
-  <h2>Experience</h2>
-  <p><strong>Site Engineer</strong>, Kamaal Engineers Ltd. (Nov 2024 – Present)</p>
-</section>
-
-<!-- Key Projects -->
-<section id="projects">
-  <h2>Key Projects</h2>
-  
-  <div class="project">
-    <h3>Design and Construction of Elevated Water Tank – Madina Hospital</h3>
-    <p><strong>Duration:</strong> Mar 2025 – May 2025</p>
-    <p><strong>Client:</strong> ICRC</p>
-    <ul>
-      <li>Conducted user demand assessments and supported structural design</li>
-      <li>Supervised excavation, foundation, columns, and slab casting</li>
-      <li>Ensured strict compliance with ICRC safety and durability standards</li>
-    </ul>
-    <p><em>Result: Delivered a durable water system ensuring reliable supply for hospital operations.</em></p>
-  </div>
-
-  <div class="project">
-    <h3>Construction of Medical Laboratory Complex – Madina Hospital</h3>
-    <p><strong>Duration:</strong> Nov 2024 – Mar 2025</p>
-    <p><strong>Client:</strong> ICRC</p>
-    <ul>
-      <li>Supervised structural works, finishes, MEP installations, and site development</li>
-      <li>Coordinated contractors, ensuring timely and high-quality execution</li>
-      <li>Maintained daily progress reports for stakeholders</li>
-    </ul>
-    <p><em>Result: Delivered a fully functional laboratory meeting international standards.</em></p>
-  </div>
-
-  <div class="project">
-    <h3>Reconstruction of Medical Warehouse – Madina Hospital</h3>
-    <p><strong>Duration:</strong> Nov 2024 – Mar 2025</p>
-    <p><strong>Client:</strong> ICRC</p>
-    <ul>
-      <li>Demolished and rehabilitated using reinforced concrete and plastering</li>
-      <li>Applied protective coatings and medical-grade finishes</li>
-      <li>Ensured compliance with hygiene and ICRC specifications</li>
-    </ul>
-    <p><em>Result: Built a modern pharmaceutical hub to strengthen hospital supply chains.</em></p>
-  </div>
-
-  <div class="project">
-    <h3>Rehabilitation of Existing Elevated Water Tank – Madina Hospital</h3>
-    <p><strong>Duration:</strong> Feb 2025 – Mar 2025</p>
-    <p><strong>Client:</strong> ICRC</p>
-    <ul>
-      <li>Sealed shear walls and applied waterproof coatings</li>
-      <li>Treated corroded reinforcement with anti-corrosive protection</li>
-      <li>Repaired slab sections and restored structural durability</li>
-    </ul>
-    <p><em>Result: Reinforced and restored tank, ensuring sustainable hospital water supply.</em></p>
-  </div>
-</section>
-
-<!-- Portfolio / Gallery -->
-<section id="portfolio">
-  <h2>Portfolio / Gallery</h2>
-  <div class="gallery">
-
-    <!-- Work Experience (Kamaal Engineers Ltd.) -->
-    <div class="project-item">
-      <img src="site1.jpg" alt="Site Supervision – Kamaal Engineers Ltd.">
-      <p>Ground Slab Surveying – Kamaal Engineers Ltd.</p>
-    </div>
-    <div class="project-item">
-      <img src="site2.jpg" alt="Structural Works – Kamaal Engineers Ltd.">
-      <p>Checking Daily Activities – Kamaal Engineers Ltd.</p>
-    </div>
-    <div class="project-item">
-      <img src="site3.jpg" alt="Construction Monitoring – Kamaal Engineers Ltd.">
-      <p>FLoor Slab Surveying – Kamaal Engineers Ltd.</p>
-    </div>
-    <div class="project-item">
-      <img src="site4.jpg" alt="Field Inspection – Kamaal Engineers Ltd.">
-      <p>Construction Monitoring – Kamaal Engineers Ltd.</p>
-    </div>
-
-    <!-- Projects images -->
-    <div class="project-item">
-      <img src="water-tank.jpg" alt="Elevated Water Tank – Madina Hospital">
-      <p>Elevated Water Tank – Madina Hospital</p>
-    </div>
-    <div class="project-item">
-      <img src="medical-lab.jpg" alt="Medical Laboratory Complex – Madina Hospital">
-      <p>Medical Laboratory Complex – Madina Hospital</p>
-    </div>
-    <div class="project-item">
-      <img src="warehouse.jpg" alt="Medical Warehouse – Madina Hospital">
-      <p>Medical Warehouse – Madina Hospital</p>
-    </div>
-    <div class="project-item">
-      <img src="water-tank-rehab.jpg" alt="Rehabilitation of Water Tank – Madina Hospital">
-      <p>Rehabilitation of Water Tank – Madina Hospital</p>
-    </div>
-
-    <!-- Education images -->
-    <div class="project-item">
-      <img src="benadir1.jpg" alt="Benadir Graduation 1">
-      <p>Benadir University Graduation</p>
-    </div>
-    <div class="project-item">
-      <img src="benadir2.jpg" alt="Benadir Graduation 2">
-      <p>Benadir University Graduation</p>
-    </div>
-    <div class="project-item">
-      <img src="benadir3.jpg" alt="Benadir Graduation 3">
-      <p>Benadir University Graduation</p>
-    </div>
-    <div class="project-item">
-      <img src="benadir4.jpg" alt="Benadir Graduation 4">
-      <p>Benadir University Graduation</p>
-    </div>
-    <div class="project-item">
-      <img src="benadir5.jpg" alt="Benadir Graduation 5">
-      <p>Benadir University Graduation</p>
-    </div>
-    <div class="project-item">
-      <img src="samabile1.jpg" alt="Samabile Graduation 1">
-      <p>Samabile College Graduation</p>
-    </div>
-    <div class="project-item">
-      <img src="samabile2.jpg" alt="Samabile Graduation 2">
-      <p>Samabile College Graduation</p>
-    </div>
-    <div class="project-item">
-      <img src="abrar1.jpg" alt="Abrar Graduation 1">
-      <p>Abrar University Graduation</p>
-    </div>
-    <div class="project-item">
-      <img src="abrar2.jpg" alt="Abrar Graduation 2">
-      <p>Abrar University Graduation</p>
-    </div>
-
-    <!-- Awards -->
-    <div class="project-item">
-      <img src="award1a.jpg" alt="3rd Rank Award">
-      <p>3rd Rank – Civil Engineering</p>
-    </div>
-    <div class="project-item">
-      <img src="award1b.jpg" alt="3rd Rank Award 2">
-      <p>3rd Rank – Civil Engineering</p>
-    </div>
-    <div class="project-item">
-      <img src="award2a.jpg" alt="Best Excellence Award">
-      <p>Best Excellence Award – Benadir University Innovation Hub</p>
-    </div>
-    <div class="project-item">
-      <img src="award2b.jpg" alt="Best Excellence Award 2">
-      <p>Best Excellence Award – Benadir University Innovation Hub</p>
-    </div>
-    <div class="project-item">
-      <img src="award3a.jpg" alt="Best Innovation Award">
-      <p>Best Innovation Winner – Benadir University Innovation Hub</p>
-    </div>
-    <div class="project-item">
-      <img src="award3b.jpg" alt="Best Innovation Award 2">
-      <p>Best Innovation Winner – Benadir University Innovation Hub</p>
-    </div>
-  </div>
-</section>
 
 
-<!-- Skills -->
-<section id="skills">
-  <h2>Skills</h2>
-  <ul>
-    <li>Engineering & Design Software: AutoCAD, ArchiCAD, SketchUp, Revit, Prokon, Prota Structure.</li>
-    <li>Construction & Project Management: Cost Estimation, Contracting, Ms_Excel, Primavera P6.</li>
-    <li>Specialized Areas: Structural Analysis, Climate-Resilient Design, Water & Sanitation Engineering (WASH)</li>
-    <li>Water & Sanitation Engineering (WASH)</li>
-  </ul>
-</section>
+<body class="view-book">
 
-<!-- References -->
-<section id="references">
-  <h2>References</h2>
-  <p>Available upon request.</p>
-</section>
+    <!-- Apply saved theme before first paint (prevents a dark/light flash) -->
+    <script>
+        try {
+            if (localStorage.getItem("theme") === "light") {
+                document.body.classList.add("light-theme");
+            }
+        } catch (e) { }
+    </script>
 
-<!-- Project Designs Portfolio -->
-<section id="project-designs">
-  <h2>Project Designs Portfolio</h2>
-  <p>Explore my detailed architectural and structural project designs:</p>
-  <ul>
-    <li><a href="SaidMustafAhmed_DesignPortfolio.pdf" target="_blank">Download PDF Portfolio</a></li>
-    <li><a href="https://www.behance.net/saidmustafahmed" target="_blank">View Online Portfolio</a></li>
-  </ul>
-</section>
+    <!-- =========================================================
+         NAVBAR
+    ========================================================== -->
 
-<!-- Resume -->
-<section id="resume">
-  <h2>Download Resume</h2>
-  <p><a href="SaidMustafAhmed_Resume.pdf" target="_blank">Download My Resume(CV)</a></p>
-</section>
+    <header id="navbar">
 
-<!-- Contact -->
-<section id="contact">
-  <h2>Contact Me</h2>
-  <p>📧 Email: <a href="mailto:smustafahmed@gmail.com">smustafahmed@gmail.com</a></p>
-  <p>📱 Phone: +252615189112</p>
-  <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/said-mustaf-ahmed-91b057261" target="_blank">Visit Profile</a></p>
-  <p>🎓 Coursera: <a href="https://www.coursera.org/user/694917381c6d16af2bbca8b3efa19165" target="_blank">View Certificates</a></p>
-</section>
+        <div class="container nav-container">
 
-<footer>
-  <p>© 2025 Said Mustaf Ahmed. All rights reserved.</p>
-</footer>
+            <a class="logo" href="#top" aria-label="Said Mustaf Ahmed — back to top">
+                <img
+                    id="nav-logo"
+                    src="assets/darl.png"
+                    alt="Said Mustaf Ahmed">
+            </a>
+
+            <!-- Shown in Modern view -->
+            <nav class="modern-nav" aria-label="Portfolio sections">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#software">Tools</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <!-- Shown in Book view -->
+            <div class="book-progress">
+                <span id="pageIndicator">Sheet 01 / 38</span>
+            </div>
+
+            <div class="nav-actions">
+
+                <div class="view-switch" role="group" aria-label="Choose portfolio view">
+
+                    <button
+                        type="button"
+                        class="view-btn"
+                        data-view="book"
+                        aria-pressed="true"
+                        aria-label="Book view"
+                        title="Book view">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>Book</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="view-btn"
+                        data-view="modern"
+                        aria-pressed="false"
+                        aria-label="Modern view"
+                        title="Modern scrolling view">
+                        <i class="fa-solid fa-table-columns"></i>
+                        <span>Modern</span>
+                    </button>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="theme-toggle"
+                    aria-label="Switch to light theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <a
+                    href="assets/Said%20Mustaf%20Ahmed%20Europass%20CV-1%20(1).pdf"
+                    download
+                    class="btn btn-primary small"
+                    aria-label="Download CV">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    <span class="btn-label">Download CV</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         BOOK STAGE
+    ========================================================== -->
+
+    <main class="book-stage">
+
+        <button
+            class="book-arrow book-arrow-left"
+            id="prevPage"
+            aria-label="Previous page">
+
+            <i class="fa-solid fa-chevron-left"></i>
+
+        </button>
+
+
+        <div id="book">
+
+
+            <!-- =================================================
+                 PAGE 01 — COVER
+            ================================================== -->
+
+            <div class="page page-cover" data-density="hard" data-view="book">
+
+                <video
+                    class="cover-bg-video"
+                    aria-hidden="true"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="auto"
+                    poster="assets/architectural-poster.jpg">
+
+                    <source
+                        src="assets/architectural-bg.mp4"
+                        type="video/mp4">
+
+                </video>
+
+                <div class="cover-bg-overlay"></div>
+
+                <div class="page-inner cover-inner">
+
+                    <span class="cover-eyebrow">
+                        Engineering Portfolio
+                    </span>
+
+                    <h1 class="cover-name">
+                        Said Mustaf<br>
+                        Ahmed
+                    </h1>
+
+                    <p class="cover-role">
+                        Civil Engineer |
+                        Construction |
+                        Architectural &amp; Urban Design
+                    </p>
+
+                    <div class="title-block cover-title-block">
+
+                        <div class="title-block-field">
+                            <span>Location</span>
+                            <strong>Mogadishu, Somalia</strong>
+                        </div>
+
+                        <div class="title-block-field">
+                            <span>Edition</span>
+                            <strong>2026</strong>
+                        </div>
+
+                    </div>
+
+                    <p class="cover-hint">
+                        <i class="fa-solid fa-hand-pointer"></i>
+                        Click the edge or use the arrows to open
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 02 — TABLE OF CONTENTS
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-view="book" data-anchor="contents">
+
+                <div class="page-inner">
+
+                    <span class="section-tag">
+                        Contents
+                    </span>
+
+                    <h2>
+                        Table of Contents
+                    </h2>
+
+                    <ul class="toc-list">
+
+                        <li>
+                            <button class="toc-link" data-goto="about">
+                                About &amp; Expertise
+                            </button>
+                        </li>
+
+                        <li>
+                            <button class="toc-link" data-goto="education">
+                                Education
+                            </button>
+                        </li>
+
+                        <li>
+                            <button class="toc-link" data-goto="experience">
+                                Experience
+                            </button>
+                        </li>
+
+                        <li>
+                            <button class="toc-link" data-goto="skills">
+                                Skills
+                            </button>
+                        </li>
+
+                        <li>
+                            <button class="toc-link" data-goto="software">
+                                Software &amp; Technical Tools
+                            </button>
+                        </li>
+
+                        <li>
+                            <button class="toc-link" data-goto="projects">
+                                Featured Projects
+                            </button>
+                        </li>
+
+                        <li>
+                            <button class="toc-link" data-goto="solar">
+                                Large-Scale Solar PV Project
+                            </button>
+                        </li>
+
+                        <li>
+                            <button class="toc-link" data-goto="urban">
+                                X-Control Afgoi Urban Development
+                            </button>
+                        </li>
+
+                        <li>
+                            <button class="toc-link" data-goto="architectural">
+                                Additional Projects
+                            </button>
+                        </li>
+
+                        <li>
+                            <button class="toc-link" data-goto="contact">
+                                Contact
+                            </button>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 03 — ABOUT
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="about" data-anchor="about">
+
+                <div class="page-inner">
+
+                    <span class="section-tag">
+                        Engineering Expertise
+                    </span>
+
+                    <h2>
+                        Building Practical Solutions for Modern Infrastructure
+                    </h2>
+
+                    <p class="page-lead">
+                        Civil Engineer experienced in site engineering,
+                        construction coordination, architectural design,
+                        quantity estimation, structural design, and
+                        sustainable infrastructure projects.
+                    </p>
+
+                    <div class="page-card-grid">
+
+                        <div class="card">
+
+                            <div class="icon-box">
+                                <i class="fa-solid fa-helmet-safety"></i>
+                            </div>
+
+                            <h3>
+                                Site Engineering
+                            </h3>
+
+                            <p>
+                                Construction supervision, site inspections,
+                                quality monitoring, contractor coordination,
+                                measurements, and progress tracking.
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="icon-box">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+
+                            <h3>
+                                Construction &amp; Coordination
+                            </h3>
+
+                            <p>
+                                Coordinating construction activities,
+                                contractors, subcontractors, suppliers,
+                                drawings, specifications, and documentation.
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="icon-box">
+                                <i class="fa-solid fa-compass-drafting"></i>
+                            </div>
+
+                            <h3>
+                                Architectural &amp; Urban Design
+                            </h3>
+
+                            <p>
+                                Architectural drawings, building layouts,
+                                3D visualization, spatial planning,
+                                and urban development concepts.
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="icon-box">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+
+                            <h3>
+                                Sustainable Infrastructure
+                            </h3>
+
+                            <p>
+                                Professional development and project
+                                exposure in sustainable cities,
+                                renewable energy infrastructure,
+                                and resilient development.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 04 — EDUCATION
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="education" data-anchor="education">
+
+                <div class="page-inner">
+
+                    <span class="section-tag">
+                        Academic Background
+                    </span>
+
+                    <h2>
+                        Education
+                    </h2>
+
+                    <div class="timeline">
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-content">
+
+                                <span class="date">
+                                    Oct 2025 – Jul 2026
+                                </span>
+
+                                <h3>
+                                    Postgraduate Diploma in Architectural
+                                    &amp; Urban Design
+                                </h3>
+
+                                <h4>
+                                    City University of Mogadishu
+                                </h4>
+
+                                <p class="gpa">
+                                    <strong>Grade:</strong>
+                                    A- (87.1%)
+                                </p>
+
+                                <p>
+                                    Specialized in sustainable urban design
+                                    and development, visualization and
+                                    representation, architectural design
+                                    studio, and integrated building systems.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-content">
+
+                                <span class="date">
+                                    Oct 2020 – Oct 2024
+                                </span>
+
+                                <h3>
+                                    Bachelor of Civil Engineering
+                                </h3>
+
+                                <h4>
+                                    Benadir University
+                                </h4>
+
+                                <p class="gpa">
+                                    <strong>GPA:</strong>
+                                    4.5 / 5.0
+                                </p>
+
+                                <p>
+                                    Focused on structural engineering,
+                                    reinforced concrete design, construction
+                                    management, transportation engineering,
+                                    and infrastructure development.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-content">
+
+                                <span class="date">
+                                    Feb 2021 – Jan 2022
+                                </span>
+
+                                <h3>
+                                    Diploma in Architectural Engineering
+                                </h3>
+
+                                <h4>
+                                    Samabile Professional College
+                                </h4>
+
+                                <p class="gpa">
+                                    <strong>Grade:</strong>
+                                    B (82.2%)
+                                    &nbsp;|&nbsp;
+                                    <strong>GPA:</strong>
+                                    3.5 / 5.0
+                                </p>
+
+                                <p>
+                                    Architectural design, drafting,
+                                    3D modelling, and construction drawings.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 05 — EXPERIENCE
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="experience" data-anchor="experience">
+
+                <div class="page-inner">
+
+                    <span class="section-tag">
+                        Professional Journey
+                    </span>
+
+                    <h2>
+                        Experience
+                    </h2>
+
+                    <div class="timeline">
+
+                        <!-- DELTA -->
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-content">
+
+                                <span class="date">
+                                    Jan 2026 – Present
+                                </span>
+
+                                <h3>
+                                    Assistant Site Engineer
+                                    &amp; Construction Coordinator
+                                </h3>
+
+                                <h4>
+                                    Delta Engineering &amp; Consultants Ltd.
+                                </h4>
+
+                                <p class="job-type">
+                                    <i class="fa-solid fa-building"></i>
+                                    Full-time • On-site
+                                </p>
+
+                                <p>
+                                    Supporting civil construction supervision,
+                                    labour and subcontractor coordination,
+                                    quantity measurement, materials logistics,
+                                    progress monitoring, and project
+                                    documentation on a large-scale project.
+                                </p>
+
+                                <ul>
+
+                                    <li>
+                                        Site Supervision |
+                                        Construction Coordination
+                                    </li>
+
+                                    <li>
+                                        Quantity Measurement |
+                                        Materials &amp; Labour Coordination
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- KAMAAL -->
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-content">
+
+                                <span class="date">
+                                    Nov 2024 – Jan 2026
+                                </span>
+
+                                <h3>
+                                    Site Engineer
+                                </h3>
+
+                                <h4>
+                                    Kamaal Engineers Ltd.
+                                </h4>
+
+                                <p class="job-type">
+                                    <i class="fa-solid fa-building"></i>
+                                    Full-time • On-site
+                                </p>
+
+                                <p>
+                                    Managed site activities, construction
+                                    supervision, inspections, quality control,
+                                    contractor coordination, measurements,
+                                    and project documentation.
+                                </p>
+
+                                <ul>
+
+                                    <li>
+                                        Site Supervision |
+                                        Quality Control
+                                    </li>
+
+                                    <li>
+                                        Construction Coordination |
+                                        Project Documentation
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 06 — EXPERIENCE CONTINUED
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="experience">
+
+                <div class="page-inner">
+
+                    <span class="section-tag">
+                        Professional Journey
+                    </span>
+
+                    <h2>
+                        Experience — Design Practice
+                    </h2>
+
+                    <div class="timeline">
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-content">
+
+                                <span class="date">
+                                    Aug 2025 – Present
+                                </span>
+
+                                <h3>
+                                    Architectural Designer
+                                </h3>
+
+                                <h4>
+                                    Greenland Construction &amp; Engineering
+                                </h4>
+
+                                <p class="job-type">
+                                    <i class="fa-solid fa-laptop-house"></i>
+                                    Part-time • Remote
+                                </p>
+
+                                <p>
+                                    Developing architectural concepts,
+                                    technical drawings, 3D visualizations,
+                                    and design solutions for building projects.
+                                </p>
+
+                                <ul>
+
+                                    <li>
+                                        Architectural Design |
+                                        Technical Drawings
+                                    </li>
+
+                                    <li>
+                                        AutoCAD |
+                                        ArchiCAD |
+                                        3D Visualization
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-content">
+
+                                Part-time remote role, carried out alongside my current full-time site engineering position
+
+                                
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 07 — SKILLS
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="skills" data-anchor="skills">
+
+                <div class="page-inner">
+
+                    <span class="section-tag">
+                        Professional Skills
+                    </span>
+
+                    <h2>
+                        Engineering Skills &amp; Technical Expertise
+                    </h2>
+
+                    <p class="page-lead">
+                        Combining civil engineering knowledge with practical
+                        experience in structural engineering, construction
+                        management, architectural design, GIS, quantity
+                        surveying, and sustainable infrastructure.
+                    </p>
+
+                    <div class="page-card-grid page-card-grid-3">
+
+                        <div class="card">
+
+                            <div class="icon-box">
+                                <i class="fas fa-building"></i>
+                            </div>
+
+                            <h3>
+                                Structural Engineering
+                            </h3>
+
+                            <p>
+                                Reinforced concrete design, steel structures,
+                                foundation systems, slabs, beams, columns,
+                                retaining walls, and structural analysis.
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="icon-box">
+                                <i class="fas fa-city"></i>
+                            </div>
+
+                            <h3>
+                                Civil Engineering
+                            </h3>
+
+                            <p>
+                                Infrastructure planning, road works,
+                                drainage systems, water supply, site
+                                development, and civil construction works.
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="icon-box">
+                                <i class="fas fa-hard-hat"></i>
+                            </div>
+
+                            <h3>
+                                Construction Management
+                            </h3>
+
+                            <p>
+                                Site supervision, contractor coordination,
+                                construction planning, quality control,
+                                safety, scheduling, and progress monitoring.
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="icon-box">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+
+                            <h3>
+                                Quantity Surveying
+                            </h3>
+
+                            <p>
+                                Quantity take-off, BOQ preparation,
+                                cost estimation, procurement, budgeting,
+                                measurements, and payment documentation.
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="icon-box">
+                                <i class="fas fa-water"></i>
+                            </div>
+
+                            <h3>
+                                Water Infrastructure
+                            </h3>
+
+                            <p>
+                                Elevated water tanks, water supply systems,
+                                distribution systems, hydraulic structures,
+                                sanitation works, and rehabilitation.
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="icon-box">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+
+                            <h3>
+                                Sustainable Engineering
+                            </h3>
+
+                            <p>
+                                Climate-resilient infrastructure,
+                                renewable energy projects, sustainable
+                                development, and resilient practices.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 08 — SOFTWARE
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="software" data-anchor="software">
+
+                <div class="page-inner">
+
+                    <span class="section-tag">
+                        Engineering Tools
+                    </span>
+
+                    <h2>
+                        Software &amp; Technical Tools
+                    </h2>
+
+                    <p class="page-lead">
+                        Engineering, architectural, GIS, visualization,
+                        and project management tools used for design,
+                        planning, analysis, documentation, and construction.
+                    </p>
+
+                    <div class="software-list">
+
+                        <div class="software-item">
+
+                            <i class="fas fa-drafting-compass"></i>
+
+                            <div>
+
+                                <h3>
+                                    Structural &amp; Design
+                                </h3>
+
+                                <p>
+                                    AutoCAD · Prokon · ProtaStructure ·
+                                    Autodesk Revit · ArchiCAD · SketchUp
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="software-item">
+
+                            <i class="fas fa-map-location-dot"></i>
+
+                            <div>
+
+                                <h3>
+                                    GIS &amp; Mapping
+                                </h3>
+
+                                <p>
+                                    QGIS · ArcGIS · Google Earth Pro
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="software-item">
+
+                            <i class="fas fa-calendar-check"></i>
+
+                            <div>
+
+                                <h3>
+                                    Project Management
+                                </h3>
+
+                                <p>
+                                    Oracle Primavera P6 · Project Scheduling ·
+                                    Construction Planning · Resource Management
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="software-item">
+
+                            <i class="fas fa-image"></i>
+
+                            <div>
+
+                                <h3>
+                                    Presentation &amp; Documentation
+                                </h3>
+
+                                <p>
+                                    Adobe Photoshop · Technical Documentation ·
+                                    Engineering Reports · 3D Visualization
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 09 — PROJECT INDEX
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-view="book" data-anchor="projects">
+
+                <div class="page-inner">
+
+                    <span class="section-tag">
+                        Portfolio
+                    </span>
+
+                    <h2>
+                        Featured Projects
+                    </h2>
+
+                    <p class="page-lead">
+                        Selected civil engineering, construction,
+                        renewable energy, structural, architectural,
+                        and urban design projects.
+                    </p>
+
+                    <div class="project-index">
+
+                        <button class="project-index-item" data-goto="civil">
+
+                            <span class="category-badge cat-civil">
+                                Civil
+                            </span>
+
+                            <h3>
+                                Construction of Medical House
+                            </h3>
+
+                            <span class="project-index-arrow">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+
+                        </button>
+
+
+                        <button class="project-index-item" data-goto="water-tank">
+
+                            <span class="category-badge cat-civil">
+                                Civil
+                            </span>
+
+                            <h3>
+                                Elevated Water Tank
+                            </h3>
+
+                            <span class="project-index-arrow">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+
+                        </button>
+
+
+                        <button class="project-index-item" data-goto="tank-rehab">
+
+                            <span class="category-badge cat-civil">
+                                Civil
+                            </span>
+
+                            <h3>
+                                Rehabilitation of Elevated Water Tank
+                            </h3>
+
+                            <span class="project-index-arrow">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+
+                        </button>
+
+
+                        <button class="project-index-item" data-goto="warehouse">
+
+                            <span class="category-badge cat-civil">
+                                Civil
+                            </span>
+
+                            <h3>
+                                Rehabilitation of Medical Warehouse
+                            </h3>
+
+                            <span class="project-index-arrow">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+
+                        </button>
+
+
+                        <button class="project-index-item" data-goto="solar">
+
+                            <span class="category-badge cat-renewable">
+                                Renewable Energy
+                            </span>
+
+                            <h3>
+                                Large-Scale Solar PV Project — Baidoa
+                            </h3>
+
+                            <span class="project-index-arrow">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+
+                        </button>
+
+
+                        <button class="project-index-item" data-goto="urban">
+
+                            <span class="category-badge cat-urban">
+                                Urban Design
+                            </span>
+
+                            <h3>
+                                X-Control Afgoi Urban Development Plan
+                            </h3>
+
+                            <span class="project-index-arrow">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+
+                        </button>
+
+
+                        <button class="project-index-item" data-goto="architectural">
+
+                            <span class="category-badge cat-architectural">
+                                Architectural
+                            </span>
+
+                            <h3>
+                                3D Architectural Walkthrough
+                            </h3>
+
+                            <span class="project-index-arrow">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+
+                        </button>
+
+
+                        <button class="project-index-item" data-goto="structural">
+
+                            <span class="category-badge cat-structural">
+                                Structural
+                            </span>
+
+                            <h3>
+                                G+3 Residential Building — Structural Design
+                            </h3>
+
+                            <span class="project-index-arrow">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 10 — MEDICAL HOUSE
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="civil" data-anchor="civil">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-civil">
+                        Civil &amp; Construction
+                    </span>
+
+                    <span class="client-info">
+                        Client: Madina Hospital |
+                        Location: Mogadishu
+                    </span>
+
+                    <h2>
+                        Construction of Medical House
+                    </h2>
+
+                    <img
+                        class="project-page-img"
+                        src="assets/insidemedicalhousemadina.jpeg"
+                        alt="Construction of Medical House at Madina Hospital">
+
+                    <p>
+                        Construction of a new medical house facility for
+                        Madina Hospital, including civil works, building
+                        construction, finishing, and integration with the
+                        existing hospital environment.
+                    </p>
+
+                    <ul class="detail-list">
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Foundation and building construction.
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Superstructure and masonry works.
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Interior and exterior finishing works.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 11 — ELEVATED WATER TANK
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="civil" data-anchor="water-tank">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-civil">
+                        Civil &amp; Construction
+                    </span>
+
+                    <span class="client-info">
+                        Client: Madina Hospital |
+                        Location: Mogadishu
+                    </span>
+
+                    <h2>
+                        Elevated Water Tank
+                    </h2>
+
+                    <img
+                        class="project-page-img"
+                        src="assets/newelevatedwatertankmadina2.jpeg"
+                        alt="Elevated Water Tank Construction">
+
+                    <p>
+                        Construction of a reinforced concrete elevated
+                        water tank to support reliable water storage
+                        and supply for hospital operations.
+                    </p>
+
+                    <ul class="detail-list">
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Reinforced concrete structural works.
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Scaffolding and elevated construction works.
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Water storage and distribution infrastructure.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 12 — REHABILITATION WATER TANK
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="civil" data-anchor="tank-rehab">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-civil">
+                        Civil &amp; Construction
+                    </span>
+
+                    <span class="client-info">
+                        Client: Madina Hospital |
+                        Role: Site Engineer
+                    </span>
+
+                    <h2>
+                        Rehabilitation of Existing Elevated Water Tank
+                    </h2>
+
+                    <img
+                        class="project-page-img"
+                        src="assets/existingelavetedwatertrankmadina.jpeg"
+                        alt="Rehabilitation of Existing Elevated Water Tank">
+
+                    <p>
+                        Rehabilitation of an existing elevated water tank,
+                        including repair works, waterproofing, and improvements
+                        to protect the structure and extend its service life.
+                    </p>
+
+                    <ul class="detail-list">
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Assessment and identification of repair requirements.
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Concrete surface repair and waterproofing.
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Reinforcement protection and maintenance works.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 13 — MEDICAL WAREHOUSE
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="civil" data-anchor="warehouse">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-civil">
+                        Civil &amp; Construction
+                    </span>
+
+                    <span class="client-info">
+                        Client: Madina Hospital |
+                        Location: Mogadishu
+                    </span>
+
+                    <h2>
+                        Rehabilitation of Medical Warehouse
+                    </h2>
+
+                    <img
+                        class="project-page-img"
+                        src="assets/medicalwarehousemadina.jpeg"
+                        alt="Medical Warehouse Rehabilitation">
+
+                    <p>
+                        Rehabilitation and upgrading of a medical warehouse,
+                        including building repairs, roofing, flooring,
+                        wall finishing, ventilation, and general improvement
+                        of the facility.
+                    </p>
+
+                    <ul class="detail-list">
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Roofing and building repair works.
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Flooring and wall finishing improvements.
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Ventilation and access improvements.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 14 — SOLAR PROJECT OVERVIEW
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="solar" data-anchor="solar">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-renewable">
+                        Renewable Energy
+                    </span>
+
+                    <span class="client-info">
+                        Company: Delta Engineering &amp; Consultants Ltd. |
+                        Location: Baidoa, Somalia
+                    </span>
+
+                    <h2>
+                        Large-Scale Solar PV Project
+                    </h2>
+
+                    <img
+                        class="project-page-img"
+                        src="assets/baidoa-solar-project.jpg"
+                        alt="Large-Scale Solar PV Project in Baidoa">
+
+                    <p>
+                        A large-scale solar photovoltaic project in Baidoa,
+                        where I support civil construction activities as an
+                        Assistant Site Engineer and Construction Coordinator.
+                    </p>
+
+                    <div class="project-section">
+
+                        <h3>
+                            <i class="fa-solid fa-circle-info"></i>
+                            Project Role
+                        </h3>
+
+                        <p>
+                            My role focuses on civil construction supervision,
+                            site coordination, quantity measurement, labour
+                            and subcontractor coordination, materials and
+                            logistics, and progress documentation.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 15 — SOLAR CIVIL WORKS
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="solar">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-renewable">
+                        Solar PV — Civil Works
+                    </span>
+
+                    <h2>
+                        Civil Construction &amp; Site Coordination
+                    </h2>
+
+                    <p class="page-lead">
+                        Civil construction activities form the foundation
+                        for the installation and operation of the renewable
+                        energy infrastructure.
+                    </p>
+
+                    <ul class="detail-list">
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Civil works supervision and site coordination.
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Labour and subcontractor coordination.
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Quantity measurement and progress records.
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Site quality and construction monitoring.
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Coordination of construction resources.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 16 — SOLAR LOGISTICS
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="solar">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-renewable">
+                        Solar PV — Coordination
+                    </span>
+
+                    <h2>
+                        Materials, Labour &amp; Logistics
+                    </h2>
+
+                    <p class="page-lead">
+                        Construction coordination includes supporting
+                        material requests, purchasing, delivery planning,
+                        labour requirements, and site logistics.
+                    </p>
+
+                    <div class="page-card-grid">
+
+                        <div class="card">
+
+                            <div class="icon-box">
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                            </div>
+
+                            <h3>
+                                Materials
+                            </h3>
+
+                            <p>
+                                Materials requests, purchasing coordination,
+                                delivery planning, and site availability.
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="icon-box">
+                                <i class="fa-solid fa-people-group"></i>
+                            </div>
+
+                            <h3>
+                                Labour
+                            </h3>
+
+                            <p>
+                                Labour requirements, subcontractor coordination,
+                                and construction workforce planning.
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="icon-box">
+                                <i class="fa-solid fa-truck"></i>
+                            </div>
+
+                            <h3>
+                                Logistics
+                            </h3>
+
+                            <p>
+                                Transport and delivery schedules supporting
+                                continuous site operations.
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="icon-box">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+
+                            <h3>
+                                Progress
+                            </h3>
+
+                            <p>
+                                Monitoring progress, resources, activities,
+                                and construction documentation.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 17 — SOLAR SITE DOCUMENTATION
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="solar">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-renewable">
+                        Solar PV — Site Documentation
+                    </span>
+
+                    <h2>
+                        Project Site &amp; Civil Infrastructure
+                    </h2>
+
+                    <div class="project-gallery-grid">
+
+                        <div class="project-gallery-item project-gallery-main">
+
+                            <img
+                                src="assets/baidoa-solar-view.jpg"
+                                alt="Baidoa Solar PV Project Site View">
+
+                            <span>
+                                Project Site View
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-gallery-item">
+
+                            <img
+                                src="assets/baidoa-inverter-manhole-stairs.jpg"
+                                alt="Inverter manhole and stairs at Baidoa Solar PV Project">
+
+                            <span>
+                                Solar Infrastructure &amp; Civil Works
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 18 — SOLAR TEAM / CURRENT PHASE
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="solar">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-renewable">
+                        Solar PV — Project Progress
+                    </span>
+
+                    <h2>
+                        Project Team &amp; Current Phase
+                    </h2>
+
+                    <div class="project-gallery-grid">
+
+                        <div class="project-gallery-item project-gallery-main">
+
+                            <img
+                                src="assets/baidoa-project-team.jpg"
+                                alt="Project Team at Baidoa Solar PV Project">
+
+                            <span>
+                                Project Team
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-gallery-item">
+
+                            <img
+                                src="assets/baidoa-site-photo.jpg"
+                                alt="Site Visit at Baidoa Solar PV Project">
+
+                            <span>
+                                Site Visit
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-section">
+
+                        <h3>
+                            <i class="fa-solid fa-forward"></i>
+                            Current Project Phase
+                        </h3>
+
+                        <p>
+                            Civil construction activities are progressing
+                            toward completion. The next major phase includes
+                            solar equipment and battery installation activities.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 19 — SOLAR WORKFLOW
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="solar">
+
+                <div class="page-inner">
+
+                    <span class="section-tag">
+                        Project Method
+                    </span>
+
+                    <h2>
+                        Solar Project Coordination Workflow
+                    </h2>
+
+                    <div class="page-card-grid page-card-grid-3">
+
+                        <div class="card">
+                            <h3>01 — Site Supervision</h3>
+                            <p>
+                                Monitor ongoing civil construction activities
+                                and coordinate daily site requirements.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <h3>02 — Measurement</h3>
+                            <p>
+                                Record quantities, progress, labour activities,
+                                and completed construction works.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <h3>03 — Resources</h3>
+                            <p>
+                                Coordinate materials, labour, transport,
+                                and subcontractor requirements.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <h3>04 — Documentation</h3>
+                            <p>
+                                Maintain progress records, payment records,
+                                and supporting project documentation.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <h3>05 — Coordination</h3>
+                            <p>
+                                Support communication between site teams,
+                                subcontractors, suppliers, and management.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <h3>06 — Next Phase</h3>
+                            <p>
+                                Support coordination toward solar and
+                                battery installation activities.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 20 — X-CONTROL OVERVIEW
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="urban" data-anchor="urban">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-urban">
+                        Urban Design &amp; Planning
+                    </span>
+
+                    <span class="client-info">
+                        Independent Urban Planning Project |
+                        X-Control, Afgoi, Somalia
+                    </span>
+
+                    <h2>
+                        X-Control Afgoi Urban Development Plan
+                    </h2>
+
+                    <img
+                        class="project-page-img"
+                        src="assets/xcontrol-afgoi-urban-plan.jpg"
+                        alt="X-Control Afgoi Urban Development Plan">
+
+                    <p>
+                        An independent urban planning and development project
+                        prepared for X-Control, Afgoi. The project focuses
+                        on understanding the existing settlement, analysing
+                        its physical conditions, and developing a practical
+                        urban development concept.
+                    </p>
+
+                    <p>
+                        The project combines site analysis, GIS mapping,
+                        land-use planning, road network planning, 2D
+                        master planning, and 3D urban visualization.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 21 — SITE CONTEXT
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="urban">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-urban">
+                        X-Control — Analysis 01
+                    </span>
+
+                    <h2>
+                        Existing Site &amp; Urban Context
+                    </h2>
+
+                    <p>
+                        The existing settlement was studied using satellite
+                        imagery and spatial information to establish the
+                        wider physical context of the planning area.
+                    </p>
+
+                    <img
+                        class="project-page-img"
+                        src="assets/xcontrol-google-earth.jpg"
+                        alt="X-Control Afgoi site context using Google Earth Pro">
+
+                    <p class="page-lead">
+                        Site context provided the starting point for the
+                        following building, land-use, road, and urban
+                        development analyses.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 22 — BUILDING CONDITION
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="urban">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-urban">
+                        X-Control — Analysis 02
+                    </span>
+
+                    <h2>
+                        Building Condition Analysis
+                    </h2>
+
+                    <img
+                        class="project-page-img"
+                        src="assets/xcontrol-building-condition.jpg"
+                        alt="Building condition analysis of X-Control Afgoi">
+
+                    <p>
+                        Building conditions were reviewed to understand
+                        the existing character of the settlement and
+                        identify the physical condition of existing
+                        development.
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>Existing Buildings</span>
+                        <span>Physical Condition</span>
+                        <span>Settlement Character</span>
+                        <span>Development Review</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 23 — BUILDING HEIGHT
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="urban">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-urban">
+                        X-Control — Analysis 03
+                    </span>
+
+                    <h2>
+                        Building Height Analysis
+                    </h2>
+
+                    <img
+                        class="project-page-img"
+                        src="assets/xcontrol-building-height.jpg"
+                        alt="Building height analysis of X-Control Afgoi">
+
+                    <p>
+                        Existing building heights were analysed to understand
+                        the vertical character and development pattern of
+                        the settlement.
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>Building Height</span>
+                        <span>Urban Form</span>
+                        <span>Existing Development</span>
+                        <span>Spatial Character</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 24 — LAND USE
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="urban">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-urban">
+                        X-Control — Analysis 04
+                    </span>
+
+                    <h2>
+                        Existing Land Use Analysis
+                    </h2>
+
+                    <img
+                        class="project-page-img"
+                        src="assets/xcontrol-land-use.jpg"
+                        alt="Existing land use analysis of X-Control Afgoi">
+
+                    <p>
+                        Existing land uses were reviewed to understand
+                        how residential, commercial, mixed-use, and
+                        other activities were distributed within the area.
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>Residential</span>
+                        <span>Commercial</span>
+                        <span>Mixed Use</span>
+                        <span>Existing Land Use</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 25 — ROAD ANALYSIS
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="urban">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-urban">
+                        X-Control — Analysis 05
+                    </span>
+
+                    <h2>
+                        Road &amp; Connectivity Analysis
+                    </h2>
+
+                    <img
+                        class="project-page-img"
+                        src="assets/xcontrol-road-analysis.jpg"
+                        alt="Road network analysis of X-Control Afgoi">
+
+                    <p>
+                        The existing road structure and connectivity
+                        were reviewed as a basis for developing a more
+                        organized urban circulation network.
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>Road Network</span>
+                        <span>Connectivity</span>
+                        <span>Street Structure</span>
+                        <span>Urban Mobility</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 26 — PLANNING OBJECTIVES
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="urban">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-urban">
+                        X-Control — Planning Concept
+                    </span>
+
+                    <h2>
+                        Urban Planning Objectives
+                    </h2>
+
+                    <p class="page-lead">
+                        The proposed development concept was organized
+                        around a number of practical planning objectives.
+                    </p>
+
+                    <ul class="detail-list">
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Analyse the existing settlement and physical conditions.
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Develop a structured urban layout and road network.
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Organize residential, commercial, and mixed-use areas.
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Identify suitable locations for community facilities.
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Introduce public parks, resting areas, and community spaces.
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Improve connectivity and overall spatial organization.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 27 — PROPOSED LAND USE
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="urban">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-urban">
+                        X-Control — Proposed Development
+                    </span>
+
+                    <h2>
+                        Proposed Land-Use Structure
+                    </h2>
+
+                    <p>
+                        The planning concept organizes development into
+                        clearly defined areas to support a more structured
+                        and connected urban environment.
+                    </p>
+
+                    <div class="page-card-grid">
+
+                        <div class="card">
+                            <h3>
+                                Residential Areas
+                            </h3>
+                            <p>
+                                Planned residential development areas
+                                integrated with the wider street network.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <h3>
+                                Commercial Areas
+                            </h3>
+                            <p>
+                                Areas intended to support commercial
+                                activities and local services.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <h3>
+                                Mixed-Use Areas
+                            </h3>
+                            <p>
+                                Areas combining compatible urban uses
+                                within the proposed development structure.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <h3>
+                                Community Spaces
+                            </h3>
+                            <p>
+                                Public and community-oriented spaces
+                                supporting social activity and services.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 28 — ROAD NETWORK PLAN
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="urban">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-urban">
+                        X-Control — Urban Structure
+                    </span>
+
+                    <h2>
+                        Proposed Road Network &amp; Connectivity
+                    </h2>
+
+                    <p>
+                        The proposed planning structure improves the
+                        organization of streets and connections between
+                        residential, commercial, mixed-use, and community
+                        areas.
+                    </p>
+
+                    <div class="page-card-grid page-card-grid-3">
+
+                        <div class="card">
+
+                            <div class="icon-box">
+                                <i class="fa-solid fa-road"></i>
+                            </div>
+
+                            <h3>
+                                Primary Connections
+                            </h3>
+
+                            <p>
+                                Main movement corridors connecting
+                                important parts of the development.
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="icon-box">
+                                <i class="fa-solid fa-route"></i>
+                            </div>
+
+                            <h3>
+                                Secondary Streets
+                            </h3>
+
+                            <p>
+                                Supporting streets providing access
+                                to local development areas.
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="icon-box">
+                                <i class="fa-solid fa-location-crosshairs"></i>
+                            </div>
+
+                            <h3>
+                                Connectivity
+                            </h3>
+
+                            <p>
+                                Improved spatial connections between
+                                different urban functions.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 29 — COMMUNITY FACILITIES
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="urban">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-urban">
+                        X-Control — Community Planning
+                    </span>
+
+                    <h2>
+                        Community Facilities &amp; Public Spaces
+                    </h2>
+
+                    <p>
+                        The proposed development includes community-oriented
+                        spaces intended to improve the social and public
+                        character of the urban environment.
+                    </p>
+
+                    <div class="page-card-grid">
+
+                        <div class="card">
+                            <h3>
+                                Community Facilities
+                            </h3>
+                            <p>
+                                Locations for community services and
+                                facilities within the planned settlement.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <h3>
+                                Cafeteria &amp; Gathering Areas
+                            </h3>
+                            <p>
+                                Spaces intended to support social interaction
+                                and community activities.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <h3>
+                                Parks
+                            </h3>
+                            <p>
+                                General green and public areas included
+                                within the urban development concept.
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <h3>
+                                Resting Areas
+                            </h3>
+                            <p>
+                                Public spaces designed to provide
+                                accessible areas for rest and activity.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 30 — 2D MASTER PLAN
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="urban">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-urban">
+                        X-Control — 2D Planning
+                    </span>
+
+                    <h2>
+                        2D Urban Development Master Plan
+                    </h2>
+
+                    <img
+                        class="project-page-img"
+                        src="assets/xcontrol-afgoi-2d-masterplan.jpg"
+                        alt="X-Control Afgoi 2D Urban Development Master Plan">
+
+                    <p>
+                        The analysis was developed into a 2D urban planning
+                        layout showing the proposed road network, land-use
+                        organization, development areas, and community spaces.
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>2D Master Planning</span>
+                        <span>Land Use</span>
+                        <span>Road Network</span>
+                        <span>Residential</span>
+                        <span>Commercial</span>
+                        <span>Mixed Use</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 31 — 3D URBAN DEVELOPMENT
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="urban">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-urban">
+                        X-Control — 3D Development
+                    </span>
+
+                    <h2>
+                        3D Urban Development
+                    </h2>
+
+                    <p>
+                        The proposed urban plan was developed into three-
+                        dimensional views to communicate the planned
+                        streets, buildings, land-use areas, public spaces,
+                        and overall character of the development.
+                    </p>
+
+                    <div class="project-gallery-grid">
+
+                        <div class="project-gallery-item project-gallery-main">
+
+                            <img
+                                src="assets/xcontrol-afgoi-3d-view-1.jpg"
+                                alt="X-Control Afgoi 3D urban development view">
+
+                            <span>
+                                3D Urban Development View
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-gallery-item">
+
+                            <img
+                                src="assets/xcontrol-afgoi-3d-view-2.jpg"
+                                alt="X-Control Afgoi 3D visualization">
+
+                            <span>
+                                Urban Design Visualization
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 32 — URBAN VISUALIZATION VIDEO
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="urban">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-urban">
+                        X-Control — Visualization
+                    </span>
+
+                    <h2>
+                        Project Visualization
+                    </h2>
+
+                    <p>
+                        A visual presentation showing the proposed urban
+                        development concept and representation of the
+                        planned area.
+                    </p>
+
+                    <video
+                        class="project-page-video"
+                        controls
+                        preload="metadata"
+                        poster="assets/xcontrol-afgoi-video-poster.jpg">
+
+                        <source
+                            src="assets/xcontrol-afgoi-urban-planning.mp4"
+                            type="video/mp4">
+
+                         
+
+                    </video>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 33 — URBAN WORKFLOW
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="urban">
+
+                <div class="page-inner">
+
+                    <span class="section-tag">
+                        Urban Planning Workflow
+                    </span>
+
+                    <h2>
+                        Design &amp; Analysis Workflow
+                    </h2>
+
+                    <div class="page-card-grid page-card-grid-3">
+
+                        <div class="card">
+
+                            <h3>
+                                01 — Site Context
+                            </h3>
+
+                            <p>
+                                Google Earth Pro
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <h3>
+                                02 — GIS Analysis
+                            </h3>
+
+                            <p>
+                                QGIS
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <h3>
+                                03 — 2D Planning
+                            </h3>
+
+                            <p>
+                                AutoCAD
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <h3>
+                                04 — 3D Development
+                            </h3>
+
+                            <p>
+                                ArchiCAD · SketchUp
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <h3>
+                                05 — Visualization
+                            </h3>
+
+                            <p>
+                                D5 Render · Lumion
+                            </p>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <h3>
+                                06 — Final Presentation
+                            </h3>
+
+                            <p>
+                                2D drawings, 3D views, and project video
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 34 — URBAN PROJECT SCOPE
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="urban">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-urban">
+                        X-Control — Project Scope
+                    </span>
+
+                    <h2>
+                        Project Scope &amp; Deliverables
+                    </h2>
+
+                    <div class="project-tags">
+
+                        <span>Urban Planning</span>
+                        <span>GIS Analysis</span>
+                        <span>Site Analysis</span>
+                        <span>Building Condition</span>
+                        <span>Building Height</span>
+                        <span>Land Use Planning</span>
+                        <span>Road Network Planning</span>
+                        <span>Residential Development</span>
+                        <span>Commercial Development</span>
+                        <span>Mixed-Use Development</span>
+                        <span>Community Facilities</span>
+                        <span>Public Space Planning</span>
+                        <span>2D Master Planning</span>
+                        <span>3D Urban Development</span>
+                        <span>Visualization</span>
+
+                    </div>
+
+                    <div class="project-section">
+
+                        <h3>
+                            <i class="fa-solid fa-diagram-project"></i>
+                            Project Development Sequence
+                        </h3>
+
+                        <p>
+                            Existing Context →
+                            Site Analysis →
+                            Urban Objectives →
+                            Land-Use Planning →
+                            Road Network →
+                            Community Spaces →
+                            2D Master Plan →
+                            3D Development →
+                            Visualization
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 35 — ADDITIONAL PROJECTS
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="architectural" data-anchor="architectural">
+
+                <div class="page-inner">
+
+                    <span class="section-tag">
+                        Additional Projects
+                    </span>
+
+                    <h2>
+                        Architectural &amp; Structural Work
+                    </h2>
+
+                    <div class="architectural-showcase">
+
+                        <span class="category-badge cat-architectural">
+                            Architectural Design
+                        </span>
+
+                        <h3>
+                            3D Architectural Walkthrough
+                        </h3>
+
+                        <p class="page-lead">
+
+                            A 3D architectural visualization project
+                            demonstrating building design, modelling,
+                            materials, and presentation.
+
+                        </p>
+
+                        <video
+                            class="project-page-video"
+                            controls
+                            preload="metadata"
+                            poster="assets/architectural-poster.jpg">
+
+                            <source
+                                src="assets/architectural-walkthrough.mp4"
+                                type="video/mp4">
+
+                            Your browser does not support the video element.
+
+                        </video>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ARCHITECTURAL PROJECT 2 — WARSHADAHA RESIDENTIAL DESIGN
+                 (1/4) INTRODUCTION
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="architectural" data-anchor="warshadaha-residential">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-architectural">
+                        Architectural Design
+                    </span>
+
+                    <span class="client-info">
+                        Independent Residential Design |
+                        Warshadaha Village, Mogadishu
+                    </span>
+
+                    <h2>
+                        Warshadaha Residential House
+                    </h2>
+
+                    <img
+                        class="project-page-img"
+                        src="assets/warshadaha-residential-3d-view-1.jpg"
+                        alt="Warshadaha residential house 3D visualization">
+
+                    <p>
+                        A residential house plan designed for a site in
+                        Warshadaha village, Mogadishu. The project was
+                        prepared to develop the architectural layout and
+                        to produce 3D visualization of the proposed design.
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>Residential</span>
+                        <span>AutoCAD 2D</span>
+                        <span>3D Visualization</span>
+                        <span>Video Presentation</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 WARSHADAHA RESIDENTIAL DESIGN — (2/4) 2D PLANS
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="architectural">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-architectural">
+                        Warshadaha Residential — 2D Plans
+                    </span>
+
+                    <h2>
+                        2D Architectural Plans
+                    </h2>
+
+                    <p>
+                        The ground floor plan and the typical first floor
+                        plan were drawn in AutoCAD to set out the room
+                        layout, circulation, and overall arrangement of
+                        the house.
+                    </p>
+
+                    <div class="project-gallery-grid">
+
+                        <div class="project-gallery-item">
+
+                            <img
+                                src="assets/warshadaha-residential-ground-floor-plan.jpg"
+                                alt="Warshadaha residential house ground floor plan">
+
+                            <span>
+                                Ground Floor Plan
+                            </span>
+
+                        </div>
+
+                        <div class="project-gallery-item">
+
+                            <img
+                                src="assets/warshadaha-residential-first-floor-plan.jpg"
+                                alt="Warshadaha residential house typical first floor plan">
+
+                            <span>
+                                Typical First Floor Plan
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-tags">
+
+                        <span>AutoCAD</span>
+                        <span>Ground Floor</span>
+                        <span>Typical First Floor</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 WARSHADAHA RESIDENTIAL DESIGN — (3/4) 3D VIEWS
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="architectural">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-architectural">
+                        Warshadaha Residential — 3D Views
+                    </span>
+
+                    <h2>
+                        3D Visualization
+                    </h2>
+
+                    <p>
+                        The 2D design was developed into 3D views to show
+                        the form, materials, and overall appearance of the
+                        proposed house.
+                    </p>
+
+                    <div class="project-gallery-grid">
+
+                        <div class="project-gallery-item">
+
+                            <img
+                                src="assets/warshadaha-residential-3d-view-1.jpg"
+                                alt="Warshadaha residential house 3D view 1">
+
+                            <span>
+                                3D View 01
+                            </span>
+
+                        </div>
+
+                        <div class="project-gallery-item">
+
+                            <img
+                                src="assets/warshadaha-residential-3d-view-2.jpg"
+                                alt="Warshadaha residential house 3D view 2">
+
+                            <span>
+                                3D View 02
+                            </span>
+
+                        </div>
+
+                        <div class="project-gallery-item">
+
+                            <img
+                                src="assets/warshadaha-residential-3d-view-3.jpg"
+                                alt="Warshadaha residential house 3D view 3">
+
+                            <span>
+                                3D View 03
+                            </span>
+
+                        </div>
+
+                        <div class="project-gallery-item">
+
+                            <img
+                                src="assets/warshadaha-residential-3d-view-11.jpg"
+                                alt="Warshadaha residential house interior 3D view">
+
+                            <span>
+                                Interior View
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 WARSHADAHA RESIDENTIAL DESIGN — (4/4) VIDEO
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="architectural">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-architectural">
+                        Warshadaha Residential — Video
+                    </span>
+
+                    <h2>
+                        Project Video
+                    </h2>
+
+                    <p>
+                        A video presentation of the proposed residential
+                        house, prepared as part of the 3D visualization
+                        of the design.
+                    </p>
+
+                    <video
+                        class="project-page-video"
+                        controls
+                        preload="metadata"
+                        poster="assets/warshadaha-residential-video-poster.jpg">
+
+                        <source
+                            src="assets/warshadaha-residential-video.mp4"
+                            type="video/mp4">
+
+                        Your browser does not support the video element.
+
+                    </video>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 36 — STRUCTURAL PROJECT
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-group="structural" data-anchor="structural">
+
+                <div class="page-inner project-page">
+
+                    <span class="category-badge cat-structural">
+                        Structural Engineering
+                    </span>
+
+                    <h2>
+                        G+3 Residential Building — Structural Design
+                    </h2>
+
+                    <p class="page-lead">
+                        A structural design project for a G+3 residential
+                        building, developed through structural planning,
+                        modelling, analysis, reinforced concrete design,
+                        and technical drawing preparation.
+                    </p>
+
+                    <img
+                        class="project-page-img"
+                        src="assets/g3-residential-structural-design.jpg"
+                        alt="G+3 Residential Building Structural Design">
+
+                    <ul class="detail-list">
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Structural planning and modelling of the G+3 residential building.
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Structural analysis and design using ProtaStructure.
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Reinforced concrete design of slabs, beams, columns, and foundations.
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Structural detailing and preparation of technical drawings.
+                        </li>
+
+                    </ul>
+
+                    <div class="software-workflow">
+
+                        <h3>
+                            <i class="fa-solid fa-layer-group"></i>
+                            Software &amp; Technical Tools
+                        </h3>
+
+                        <p>
+                            <strong>Structural Design:</strong>
+                            ProtaStructure
+                        </p>
+
+                        <p>
+                            <strong>Technical Drawings:</strong>
+                            AutoCAD
+                        </p>
+
+                    </div>
+
+                    <div class="project-download">
+
+                        <a
+                            href="assets/g3-residential-structural-design.dwg"
+                            class="btn"
+                            download>
+
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                            Download DWG Drawing (AutoCAD)
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 37 — CONTACT
+            ================================================== -->
+
+            <div class="page" data-density="soft" data-view="book" data-anchor="contact">
+
+                <div class="page-inner">
+
+                    <span class="section-tag">
+                        Contact Me
+                    </span>
+
+                    <h2>
+                        Let's Work Together
+                    </h2>
+
+                    <p class="page-lead">
+                        Whether you are interested in construction,
+                        civil engineering, architectural and urban design,
+                        or a professional collaboration, I would be pleased
+                        to hear from you.
+                    </p>
+
+                    <div class="contact-info">
+
+                        <div class="info-item">
+
+                            <div class="icon-circle">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+
+                            <div>
+
+                                <h5>
+                                    Email
+                                </h5>
+
+                                <a href="mailto:smustafahmed@gmail.com">
+                                    smustafahmed@gmail.com
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <div class="icon-circle">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+
+                            <div>
+
+                                <h5>
+                                    Phone
+                                </h5>
+
+                                <a href="tel:+252615189112">
+                                    +252 615 189 112
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <div class="icon-circle">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+
+                            <div>
+
+                                <h5>
+                                    Location
+                                </h5>
+
+                                <p>
+                                    Mogadishu, Somalia
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <form
+                        id="contactForm"
+                        class="contact-form"
+                        action="https://formspree.io/f/xqernqjj"
+                        method="POST">
+
+                        <input
+                            type="hidden"
+                            name="_subject"
+                            value="New Portfolio Contact Message">
+
+                        <!-- spam trap: real visitors never see or fill this -->
+                        <input
+                            type="text"
+                            name="_gotcha"
+                            class="hp-field"
+                            tabindex="-1"
+                            autocomplete="off"
+                            aria-hidden="true">
+
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email address"
+                                autocomplete="email"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="3"
+                                placeholder="Write your message or inquiry..."
+                                required></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-secondary full-width">
+
+                            Send Message
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PAGE 38 — BACK COVER
+            ================================================== -->
+
+            <div class="page page-cover" data-density="hard" data-view="book">
+
+                <div class="page-inner cover-inner">
+
+                    <img
+                        src="assets/darl.png"
+                        alt="Said Mustaf Ahmed"
+                        class="back-cover-logo"
+                        loading="lazy">
+
+                    <p class="cover-role">
+                        Civil Engineer |
+                        Construction |
+                        Architectural &amp; Urban Design
+                    </p>
+
+                    <p class="cover-hint">
+                        Thank you for reading.
+                    </p>
+
+
+                    <div class="social-links back-cover-social">
+
+                        <a
+                            href="https://www.linkedin.com/in/said-mustaf-ahmed-91b057261"
+                            target="_blank"
+                            rel="noopener"
+                            class="social-icon"
+                            aria-label="LinkedIn">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </a>
+
+
+                        <a
+                            href="https://wa.me/252615189112"
+                            target="_blank"
+                            rel="noopener"
+                            class="social-icon"
+                            aria-label="WhatsApp">
+
+                            <i class="fa-brands fa-whatsapp"></i>
+
+                        </a>
+
+
+                        <a
+                            href="mailto:smustafahmed@gmail.com"
+                            class="social-icon"
+                            aria-label="Email">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <p class="copyright">
+                        &copy; 2026 Said Mustaf Ahmed.
+                        All Rights Reserved.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- NEXT BUTTON -->
+
+        <button
+            class="book-arrow book-arrow-right"
+            id="nextPage"
+            aria-label="Next page">
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+        </button>
+
+    </main>
+
+
+    <!-- =========================================================
+         MODERN VIEW  (scrolling website layout)
+         The project / education / experience sections are
+         generated by script.js from the same content as the
+         book pages, so you only edit each text once.
+    ========================================================== -->
+
+    <div id="modern" class="modern">
+
+        <section class="m-hero" id="top">
+
+            <div class="container m-hero-inner">
+
+                <span class="m-eyebrow">Engineering Portfolio · 2026</span>
+
+                <h1>
+                    Said Mustaf
+                    <span class="text-gradient">Ahmed</span>
+                </h1>
+
+                <p class="m-role">
+                    Civil Engineer | Construction | Architectural &amp; Urban Design
+                </p>
+
+                <p class="m-summary">
+                    Civil Engineer experienced in site engineering,
+                    construction coordination, architectural design,
+                    quantity estimation, structural design, and
+                    sustainable infrastructure projects.
+                </p>
+
+                <p class="m-now">
+                    <i class="fa-solid fa-circle"></i>
+                    <span>
+                        <strong>Currently:</strong>
+                        Assistant Site Engineer &amp; Construction Coordinator
+                        at Delta Engineering &amp; Consultants Ltd. — large-scale Solar PV project, Baidoa
+                    </span>
+                </p>
+
+                <div class="m-hero-actions">
+
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fa-solid fa-diagram-project"></i>
+                        View Projects
+                    </a>
+
+                    <a
+                        href="assets/Said%20Mustaf%20Ahmed%20Europass%20CV-1%20(1).pdf"
+                        download
+                        class="btn btn-outline">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        Download CV
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fa-solid fa-envelope"></i>
+                        Contact Me
+                    </a>
+
+                </div>
+
+                <dl class="m-stats">
+
+                    <div class="m-stat">
+                        <dt>Bachelor of Civil Engineering — GPA</dt>
+                        <dd>4.5 / 5.0</dd>
+                    </div>
+
+                    <div class="m-stat">
+                        <dt>PG Diploma — Arch. &amp; Urban Design</dt>
+                        <dd>A- · 87.1%</dd>
+                    </div>
+
+                    <div class="m-stat">
+                        <dt>In professional site practice</dt>
+                        <dd>Since 2024</dd>
+                    </div>
+
+                    <div class="m-stat">
+                        <dt>Project disciplines</dt>
+                        <dd>5</dd>
+                    </div>
+
+                </dl>
+
+            </div>
+
+        </section>
+
+
+        <!-- generated by script.js -->
+        <div id="modernSections"></div>
+
+
+        <section class="m-section" id="contact">
+
+            <div class="container m-contact-grid">
+
+                <div>
+
+                    <header class="m-section-head">
+
+                        <span class="section-tag">Contact Me</span>
+
+                        <h2>Let's Work Together</h2>
+
+                        <p>
+                            Whether you are interested in construction,
+                            civil engineering, architectural and urban design,
+                            or a professional collaboration, I would be pleased
+                            to hear from you.
+                        </p>
+
+                    </header>
+
+                    <div class="contact-info">
+
+                        <div class="info-item">
+                            <div class="icon-circle">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5>Email</h5>
+                                <a href="mailto:smustafahmed@gmail.com">smustafahmed@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon-circle">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5>Phone</h5>
+                                <a href="tel:+252615189112">+252 615 189 112</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="icon-circle">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h5>Location</h5>
+                                <p>Mogadishu, Somalia</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <form
+                    class="m-form-card contact-form"
+                    action="https://formspree.io/f/xqernqjj"
+                    method="POST">
+
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="New Portfolio Contact Message">
+
+                    <input
+                        type="text"
+                        name="_gotcha"
+                        class="hp-field"
+                        tabindex="-1"
+                        autocomplete="off"
+                        aria-hidden="true">
+
+                    <div class="form-group">
+                        <label for="m-name">Full Name</label>
+                        <input
+                            type="text"
+                            id="m-name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="m-email">Email Address</label>
+                        <input
+                            type="email"
+                            id="m-email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="m-message">Message</label>
+                        <textarea
+                            id="m-message"
+                            name="message"
+                            rows="5"
+                            placeholder="Write your message or inquiry..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary full-width">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <footer class="m-footer">
+
+            <div class="container m-footer-inner">
+
+                <div class="m-footer-brand">
+
+                    <img
+                        src="assets/darl.png"
+                        alt="Said Mustaf Ahmed"
+                        loading="lazy">
+
+                    <div>
+                        <strong>Said Mustaf Ahmed</strong>
+                        <span>Civil Engineer | Construction | Architectural &amp; Urban Design</span>
+                        <small>&copy; 2026 Said Mustaf Ahmed. All Rights Reserved.</small>
+                    </div>
+
+                </div>
+
+                <div class="social-links">
+
+                    <a
+                        href="https://www.linkedin.com/in/said-mustaf-ahmed-91b057261"
+                        target="_blank"
+                        rel="noopener"
+                        class="social-icon"
+                        aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a
+                        href="https://wa.me/252615189112"
+                        target="_blank"
+                        rel="noopener"
+                        class="social-icon"
+                        aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <a
+                        href="mailto:smustafahmed@gmail.com"
+                        class="social-icon"
+                        aria-label="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+    <button type="button" class="to-top" id="toTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>

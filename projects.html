@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Explore the engineering and design projects of Said Mustaf Ahmed, including civil construction, renewable energy, urban planning, architectural design, and structural engineering projects in Somalia.">
+    <meta name="keywords"
+        content="Said Mustaf Ahmed Projects, Civil Engineering Projects, Construction Projects Somalia, Solar PV Somalia, Urban Planning Afgoi, Architectural Design, Structural Engineering">
+    <meta name="author" content="Said Mustaf Ahmed">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0A1421">
+
+    <!-- Open Graph (use an absolute https:// URL for og:image once the site is online) -->
+    <meta property="og:title" content="Projects | Said Mustaf Ahmed | Civil Engineer">
+    <meta property="og:description"
+        content="Explore civil construction, renewable energy, urban planning, architectural, and structural engineering projects.">
+    <meta property="og:image" content="assets/hero.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="assets/darl.png">
+
+    <title>Projects | Said Mustaf Ahmed | Civil Engineer | Construction | Architectural &amp; Urban Design</title>
+
+    <!-- Fonts + icons (same as the main portfolio) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Same design tokens as style.css so both pages feel like one site */
+        :root {
+            --bg: #0A1421;
+            --surface: #121F30;
+            --surface-2: #17283C;
+            --border: #223349;
+            --text: #F5F3EC;
+            --muted: #8B9BAE;
+            --primary: #F4661B;
+            --primary-strong: #C2410C;
+            --primary-strong-hover: #9A3412;
+            --cyan: #2DD4E8;
+            --cyan-rgb: 45, 212, 232;
+            --nav-bg: rgba(10, 20, 33, 0.88);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+        }
+
+        body.light-theme {
+            --bg: #F6F4EC;
+            --surface: #FFFFFF;
+            --surface-2: #EFEBDD;
+            --border: #DEDACB;
+            --text: #16202C;
+            --muted: #4F5F70;
+            --primary: #C2410C;
+            --cyan: #0E7490;
+            --cyan-rgb: 14, 116, 144;
+            --nav-bg: rgba(246, 244, 236, 0.92);
+            --shadow: 0 8px 24px rgba(22, 32, 44, 0.08);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+        body {
+            font-family: "IBM Plex Sans", system-ui, sans-serif;
+            background:
+                radial-gradient(circle at 75% 0%, rgba(var(--cyan-rgb), 0.09), transparent 40%),
+                repeating-linear-gradient(0deg, rgba(var(--cyan-rgb), 0.04) 0 1px, transparent 1px 40px),
+                repeating-linear-gradient(90deg, rgba(var(--cyan-rgb), 0.04) 0 1px, transparent 1px 40px),
+                var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+            transition: background-color .3s, color .3s;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+        .container { width: min(1180px, 92%); margin: auto; }
+
+        :focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 4px; }
+
+        /* HEADER */
+        header {
+            position: sticky; top: 0; z-index: 100;
+            background: var(--nav-bg);
+            -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+        .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+        .brand img { width: 48px; height: 48px; object-fit: contain; border-radius: 50%; }
+        .brand-text strong { display: block; font-family: "Space Grotesk", sans-serif; font-size: 1rem; }
+        .brand-text span { color: var(--muted); font-size: .76rem; display: block; }
+        .nav-links { display: flex; align-items: center; gap: 22px; }
+        .nav-links a { color: var(--muted); font-size: .9rem; transition: .25s; }
+        .nav-links a:hover { color: var(--text); }
+        .theme-toggle {
+            width: 38px; height: 38px; display: grid; place-items: center;
+            border: 1px solid var(--border); border-radius: 50%;
+            background: var(--surface); color: var(--muted); cursor: pointer; transition: .25s;
+        }
+        .theme-toggle:hover { color: var(--text); }
+        .nav-button {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 9px 16px; border-radius: 8px;
+            background: var(--primary-strong); color: #fff !important; font-weight: 600;
+        }
+        .nav-button:hover { background: var(--primary-strong-hover); }
+
+        /* HERO */
+        .hero { padding: 90px 0 60px; text-align: center; }
+        .eyebrow {
+            display: inline-block; margin-bottom: 18px;
+            font-family: "IBM Plex Mono", monospace; font-size: .78rem;
+            letter-spacing: .12em; text-transform: uppercase; color: var(--primary);
+        }
+        .hero h1 {
+            max-width: 850px; margin: auto;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(2.4rem, 6vw, 4.4rem); line-height: 1.05; letter-spacing: -.03em;
+        }
+        .hero h1 span { background: linear-gradient(90deg, var(--cyan), var(--primary)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { max-width: 720px; margin: 22px auto 0; color: var(--muted); font-size: 1.05rem; }
+        .hero-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+            padding: 12px 22px; border-radius: 8px; border: 1px solid var(--border);
+            font-weight: 600; font-size: .95rem; transition: .25s;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary { background: var(--primary-strong); border-color: var(--primary-strong); color: #fff; }
+        .btn-primary:hover { background: var(--primary-strong-hover); border-color: var(--primary-strong-hover); }
+        .btn-secondary { background: var(--surface); }
+        .btn-secondary:hover { border-color: var(--primary); color: var(--primary); }
+
+        /* PROJECT CARDS */
+        .projects-section { padding: 30px 0 80px; }
+        .section-heading { margin-bottom: 30px; }
+        .section-heading > span {
+            color: var(--primary); font-family: "IBM Plex Mono", monospace;
+            font-size: .75rem; text-transform: uppercase; letter-spacing: .1em;
+        }
+        .section-heading h2 { margin-top: 8px; font-family: "Space Grotesk", sans-serif; font-size: 2rem; }
+        .section-heading p { margin-top: 10px; max-width: 720px; color: var(--muted); }
+
+        .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+
+        .project-card {
+            display: flex; flex-direction: column; overflow: hidden;
+            border: 1px solid var(--border); border-radius: 16px;
+            background: var(--surface); box-shadow: var(--shadow);
+            transition: transform .25s, border-color .25s;
+        }
+        .project-card:hover { transform: translateY(-4px); border-color: var(--primary); }
+        .project-thumb { aspect-ratio: 16 / 9; background: var(--surface-2); overflow: hidden; }
+        .project-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+        .project-card:hover .project-thumb img { transform: scale(1.04); }
+        .project-body { display: flex; flex-direction: column; flex: 1; padding: 26px 28px 28px; }
+        .project-number {
+            font-family: "IBM Plex Mono", monospace; color: var(--cyan);
+            font-size: .75rem; letter-spacing: .06em;
+        }
+        .project-card h3 { font-family: "Space Grotesk", sans-serif; font-size: 1.3rem; margin: 8px 0 10px; }
+        .project-card p { color: var(--muted); font-size: .94rem; }
+        .project-link {
+            display: inline-flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 18px;
+            color: var(--primary); font-size: .9rem; font-weight: 600;
+        }
+        .project-link:hover { text-decoration: underline; }
+
+        .cta-card {
+            justify-content: center; text-align: center; padding: 34px 28px;
+            background: linear-gradient(145deg, rgba(var(--cyan-rgb), .08), transparent), var(--surface);
+        }
+        .cta-card h3 { font-family: "Space Grotesk", sans-serif; font-size: 1.4rem; margin-bottom: 10px; }
+        .cta-card p { color: var(--muted); max-width: 420px; margin: 0 auto 22px; }
+        .cta-card .hero-actions { margin-top: 0; }
+
+        /* FEATURED */
+        .featured { padding: 0 0 90px; }
+        .featured-box {
+            display: grid; grid-template-columns: 1.1fr 1fr;
+            border: 1px solid var(--border); border-radius: 18px; overflow: hidden;
+            background: var(--surface); box-shadow: var(--shadow);
+        }
+        .featured-image { min-height: 430px; background: var(--surface-2); }
+        .featured-image img { width: 100%; height: 100%; object-fit: cover; }
+        .featured-content { padding: 42px; display: flex; flex-direction: column; justify-content: center; }
+        .tag {
+            display: inline-flex; width: fit-content; padding: 5px 10px; border-radius: 5px; margin-bottom: 15px;
+            background: rgba(var(--cyan-rgb), .12); color: var(--cyan);
+            font-family: "IBM Plex Mono", monospace; font-size: .72rem; letter-spacing: .06em;
+        }
+        .featured-content h2 { font-family: "Space Grotesk", sans-serif; font-size: 2rem; line-height: 1.15; }
+        .featured-content p { margin-top: 16px; color: var(--muted); }
+        .case-list { list-style: none; margin-top: 20px; }
+        .case-list li { display: flex; gap: 10px; margin: 9px 0; color: var(--muted); font-size: .92rem; }
+        .case-list i { color: var(--primary); margin-top: 6px; font-size: .72rem; }
+        .featured-cta { margin-top: 25px; }
+
+        /* FOOTER */
+        footer { border-top: 1px solid var(--border); padding: 35px 0; color: var(--muted); background: var(--surface-2); }
+        .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+        footer strong { color: var(--text); font-family: "Space Grotesk", sans-serif; }
+        .socials { display: flex; gap: 10px; }
+        .socials a {
+            width: 40px; height: 40px; display: grid; place-items: center;
+            border: 1px solid var(--border); border-radius: 50%; background: var(--surface); transition: .25s;
+        }
+        .socials a:hover { color: #fff; background: var(--primary-strong); border-color: var(--primary-strong); }
+
+        @media (max-width: 800px) {
+            .nav-links .hide-sm { display: none; }
+            .nav-links { gap: 12px; }
+            .brand-text span { display: none; }
+            .project-grid, .featured-box { grid-template-columns: 1fr; }
+            .featured-image { min-height: 240px; }
+            .featured-content { padding: 28px; }
+            .hero { padding-top: 60px; }
+            .footer-inner { flex-direction: column; text-align: center; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            * { transition-duration: .01ms !important; }
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        try { if (localStorage.getItem("theme") === "light") document.body.classList.add("light-theme"); } catch (e) { }
+    </script>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container nav">
+
+            <a href="index.html" class="brand" aria-label="Said Mustaf Ahmed — home">
+                <img src="assets/darl.png" alt="Said Mustaf Ahmed">
+                <div class="brand-text">
+                    <strong>Said Mustaf Ahmed</strong>
+                    <span>Civil Engineer | Construction | Architectural &amp; Urban Design</span>
+                </div>
+            </a>
+
+            <nav class="nav-links" aria-label="Main">
+                <a href="index.html" class="hide-sm">Portfolio</a>
+                <a href="#projects" class="hide-sm">Projects</a>
+                <a href="index.html#contact" class="hide-sm">Contact</a>
+
+                <button type="button" class="theme-toggle" aria-label="Switch to light theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <a href="index.html" class="nav-button">
+                    <i class="fa-solid fa-book-open"></i>
+                    Open Portfolio
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container">
+
+                <span class="eyebrow">Engineering Project Portfolio</span>
+
+                <h1>Projects &amp; <span>Case Studies</span></h1>
+
+                <p>
+                    A selected portfolio of civil construction, renewable energy,
+                    urban planning, architectural design, and structural engineering
+                    projects developed through professional experience and independent
+                    design work.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="index.html?view=book" class="btn btn-primary">
+                        <i class="fa-solid fa-book-open"></i>
+                        Open Interactive Portfolio
+                    </a>
+                    <a href="index.html?view=modern" class="btn btn-secondary">
+                        <i class="fa-solid fa-table-columns"></i>
+                        Modern View
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <i class="fa-solid fa-arrow-down"></i>
+                        Explore Projects
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- PROJECT CATEGORIES -->
+        <section class="projects-section" id="projects">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span>Selected Work</span>
+                    <h2>Project Categories</h2>
+                    <p>
+                        The projects below represent practical engineering,
+                        construction, planning, design, and infrastructure work.
+                    </p>
+                </div>
+
+                <div class="project-grid">
+
+                    <article class="project-card">
+                        <div class="project-thumb">
+                            <img src="assets/insidemedicalhousemadina.jpeg" alt="Medical house construction at Madina Hospital" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <span class="project-number">01 / CIVIL</span>
+                            <h3>Civil Construction</h3>
+                            <p>Medical facilities, elevated water infrastructure, rehabilitation works, and building construction projects.</p>
+                            <a href="index.html#civil" class="project-link">View Civil Projects <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-thumb">
+                            <img src="assets/baidoa-solar-project.jpg" alt="Large-scale solar PV project in Baidoa" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <span class="project-number">02 / RENEWABLE ENERGY</span>
+                            <h3>Large-Scale Solar PV</h3>
+                            <p>Civil construction and coordination work for a large-scale solar photovoltaic project in Baidoa, Somalia.</p>
+                            <a href="index.html#solar" class="project-link">View Solar PV Project <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-thumb">
+                            <img src="assets/xcontrol-afgoi-3d-view-1.jpg" alt="X-Control Afgoi 3D urban development view" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <span class="project-number">03 / URBAN DESIGN</span>
+                            <h3>X-Control Afgoi Urban Development</h3>
+                            <p>An independent urban planning project covering site analysis, land use, road connectivity, public spaces, 2D planning, and 3D visualization.</p>
+                            <a href="index.html#urban" class="project-link">View Urban Project <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-thumb">
+                            <img src="assets/architectural-poster.jpg" alt="3D architectural walkthrough" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <span class="project-number">04 / ARCHITECTURAL</span>
+                            <h3>Architectural Design</h3>
+                            <p>Architectural modeling, technical drawings, 3D visualization, and walkthrough development.</p>
+                            <a href="index.html#architectural" class="project-link">View Architectural Project <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-thumb">
+                            <img src="assets/g3-residential-structural-design.jpg" alt="G+3 residential building structural design" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <span class="project-number">05 / STRUCTURAL</span>
+                            <h3>G+3 Structural Design</h3>
+                            <p>Structural planning, analysis, reinforced concrete design, detailing, and technical drawings for a G+3 residential building.</p>
+                            <a href="index.html#structural" class="project-link">View Structural Project <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="project-card cta-card">
+                        <h3>See everything in one place</h3>
+                        <p>Education, experience, skills, software, and all project details in the full portfolio.</p>
+                        <div class="hero-actions">
+                            <a href="index.html?view=book" class="btn btn-primary"><i class="fa-solid fa-book-open"></i> Book View</a>
+                            <a href="index.html?view=modern" class="btn btn-secondary"><i class="fa-solid fa-table-columns"></i> Modern View</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- FEATURED PROJECT -->
+        <section class="featured">
+            <div class="container">
+                <div class="featured-box">
+
+                    <div class="featured-image">
+                        <img src="assets/xcontrol-afgoi-urban-plan.jpg" alt="X-Control Afgoi Urban Development Plan" loading="lazy">
+                    </div>
+
+                    <div class="featured-content">
+                        <span class="tag">FEATURED CASE STUDY</span>
+                        <h2>X-Control Afgoi Urban Development Plan</h2>
+                        <p>
+                            An independent urban planning and development project
+                            focused on understanding the existing settlement and
+                            developing a practical urban development concept.
+                        </p>
+
+                        <ul class="case-list">
+                            <li><i class="fa-solid fa-check"></i> Existing site and settlement analysis</li>
+                            <li><i class="fa-solid fa-check"></i> Building condition and height analysis</li>
+                            <li><i class="fa-solid fa-check"></i> Existing land-use analysis</li>
+                            <li><i class="fa-solid fa-check"></i> Road and connectivity analysis</li>
+                            <li><i class="fa-solid fa-check"></i> 2D urban development planning</li>
+                            <li><i class="fa-solid fa-check"></i> Community facilities and public spaces</li>
+                            <li><i class="fa-solid fa-check"></i> 3D urban development and visualization</li>
+                        </ul>
+
+                        <div class="featured-cta">
+                            <a href="index.html#urban" class="btn btn-primary">
+                                <i class="fa-solid fa-book-open"></i>
+                                Open Full Case Study
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-inner">
+
+            <div>
+                <strong>Said Mustaf Ahmed</strong>
+                <p>Civil Engineer | Construction | Architectural &amp; Urban Design</p>
+                <small>&copy; 2026 Said Mustaf Ahmed. All Rights Reserved.</small>
+            </div>
+
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/said-mustaf-ahmed-91b057261" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://wa.me/252615189112" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="mailto:smustafahmed@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var btn = document.querySelector(".theme-toggle");
+            var meta = document.querySelector('meta[name="theme-color"]');
+            function paint() {
+                var light = document.body.classList.contains("light-theme");
+                btn.querySelector("i").className = light ? "fa-solid fa-sun" : "fa-solid fa-moon";
+                btn.setAttribute("aria-label", light ? "Switch to dark theme" : "Switch to light theme");
+                if (meta) meta.setAttribute("content", light ? "#F6F4EC" : "#0A1421");
+            }
+            btn.addEventListener("click", function () {
+                document.body.classList.toggle("light-theme");
+                try { localStorage.setItem("theme", document.body.classList.contains("light-theme") ? "light" : "dark"); } catch (e) { }
+                paint();
+            });
+            paint();
+        })();
+    </script>
+</body>
+
+</html>
